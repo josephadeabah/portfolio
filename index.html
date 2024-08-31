@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+            integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script defer src="app.js"></script>
+        <title>Adeabah Joseph [alias, Abe Ansah] - Web Developer</title>
+        <meta
+            name="description"
+            content="I'm Adeabah Joseph, a front-end web developer based in Ghana. I enjoy building beautiful and responsive websites with clean and elegant code. Explore my portfolio and contact me for collaboration."
+        />
+        <meta
+            name="keywords"
+            content="Adeabah Joseph, web developer, front-end developer, Ghana, portfolio, collaboration"
+        />
+    </head>
+    <body>
+        <div id="preloader">
+            <svg
+                id="animatedLogo"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+                <g>
+                    <g
+                        id="letter"
+                        transform="translate(34, 33)"
+                        fill="#64FFDA"
+                        style="opacity: 0"
+                        font-family="Inter, sans-serif"
+                        font-size="50"
+                        font-weight="700"
+                        letter-spacing="4.16666603"
+                    >
+                        <text>
+                            <tspan x="0.141666985" y="33">R</tspan>
+                        </text>
+                    </g>
+                    <path
+                        stroke="#64FFDA"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M 50, 5
+        L 11, 27
+        L 11, 72
+        L 50, 95
+        L 89, 73
+        L 89, 28 z"
+                    />
+                </g>
+            </svg>
+        </div>
+        <div class="scroll scroll-left">
+            <span>scroll down</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+        <div class="scroll scroll-right">
+            <span>scroll down</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+        <ul class="media-links">
+            <li>
+                <a
+                    href="https://www.pnpmmedia.com"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Pnpm Media"
+                    ><i class="fa-solid fa-code"></i
+                ></a>
+            </li>
+            <li>
+                <a
+                    href="https://github.com/josephadeabah"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="GitHub"
+                    ><i class="fa-brands fa-github"></i
+                ></a>
+            </li>
+            <li>
+                <a
+                    href="https://x.com/abe_ansah"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Twitter"
+                    ><i class="fa-brands fa-twitter"></i
+                ></a>
+            </li>
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/joseph-835977a5/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+            </li>
+        </ul>
+        <a class="gmail" href="mailto:joseph.adeabah@dpschool.io"
+            >joseph.adeabah@dpschool.io</a
+        >
+        <a href="#" class="go-top" aria-label="scroll back to top"
+            ><i class="fa-brands fa-space-awesome"></i
+        ></a>
+
+        <nav>
+            <a href="#" class="nav__logo">
+                <svg>
+                    <use xlink:href="./images/logo.svg#logo" />
+                </svg>
+            </a>
+            <ul class="nav__list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a
+                        href="./Joseph Adeabah Resume.pdf"
+                        target="_blank"
+                        class="resume"
+                        >Resume</a
+                    >
+                </li>
+            </ul>
+            <div class="nav__menu">
+                <div class="hamburger"></div>
+            </div>
+        </nav>
+        <main class="container">
+            <header>
+                <div class="header__avatar">
+                    <img
+                        src="./images/avatar.svg"
+                        alt="Rocky's avatar"
+                        class="header__avatar-img"
+                    />
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                    <div class="eye-lid left-eye-lid"></div>
+                    <div class="eye-lid right-eye-lid"></div>
+                </div>
+                <div class="header__text-content">
+                    <p class="header__hi">Hi, my name is</p>
+                    <h1>
+                        <span class="header__name">Joseph Adeabah,</span
+                        ><br /><span class="header__bio">Web Developer</span>
+                    </h1>
+                    <p class="header__intro">
+                        I'm a software developer. I enjoy building beautiful,
+                        responsive websites and apps with clean, efficient, and elegant
+                        code.
+                    </p>
+                    <div class="header__links">
+                        <a href="./Joseph Adeabah Resume.pdf" target="_blank"
+                            >Resume</a
+                        >
+                        <a href="#work">My Works</a>
+                    </div>
+                </div>
+            </header>
+            <div class="about" id="about">
+                <section class="about__myself translateUp">
+                    <h2>About Me</h2>
+                    <p>
+                        Hey there, I'm Joseph Adeabah (alias, Abe Ansah)! Hailing from the
+                        stunning land of Ghana, I'm a software
+                        developer with an unquenchable thirst for creating
+                        incredible things online.<br /><br />As soon as I
+                        discovered web development, I knew I had found my
+                        passion! With my natural curiosity and problem-solving
+                        skills, I've learned so much and built some pretty
+                        impressive stuff along the way.<br /><br />But what
+                        really gets me excited is the opportunity to collaborate
+                        with positive, like-minded people to create something
+                        truly mind-blowing. So, are you ready to join forces and
+                        bring our wildest ideas to life?
+                        <a href="#contact">Let's make it happen!</a>
+                    </p>
+                </section>
+                <section class="about__skill translateUp">
+                    <h2>Things I've learned</h2>
+                    <ul class="about__skill-list">
+                        <li><i class="fa-brands fa-html5"></i></li>
+                        <li>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </li>
+                        <li><i class="fa-brands fa-js"></i></li>
+                        <li><i class="fa-brands fa-react"></i></li>
+                        <li><i class="fa-brands fa-git"></i></li>
+                        <li><i class="fa-brands fa-vuejs"></i></li>
+                        <li><i class="fa-brands fa-docker"></i></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="work" id="work">
+                <h2 class="translateUp">Some of my recent works</h2>
+                <div class="project-section">
+                    <div class="project translateUp">
+                        <a
+                            href="https://drougnov.github.io/Appvilla"
+                            target="_blank"
+                            rel="noopener"
+                            class="project__image"
+                        >
+                            <img src="./images/appvilla.png" alt="Appvilla" />
+                        </a>
+                        <section class="project__text">
+                            <span class="project__text-type">Landing Page</span>
+                            <a
+                                href="https://drougnov.github.io/Appvilla"
+                                target="_blank"
+                                rel="noopener"
+                                class="project__text-name"
+                                >Appvilla</a
+                            >
+                            <p class="project__text-info">
+                                Appvilla is a multi-page landing page made with
+                                pure Html, CSS and JavaScript. This site is
+                                completely responsive and cross-browser
+                                compatible. It also has some cool animations on
+                                scoll, carousel slider, accordion etc.
+                            </p>
+                            <div class="project__text-lang">
+                                <span>Html</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project__text-links">
+                                <a
+                                    href="https://github.com/Drougnov/Appvilla"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Github code link"
+                                    ><i class="fa-brands fa-github"></i
+                                ></a>
+                                <a
+                                    href="https://drougnov.github.io/Appvilla"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="website link"
+                                    ><i class="fa-solid fa-eye"></i
+                                ></a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="project translateUp">
+                        <a
+                            href="https://drougnov.github.io/todo-app-main"
+                            target="_blank"
+                            rel="noopener"
+                            class="project__image"
+                        >
+                            <img src="./images/todo app.png" alt="Todo App" />
+                        </a>
+                        <section class="project__text">
+                            <span class="project__text-type">Web App</span>
+                            <a
+                                href="https://drougnov.github.io/todo-app-main"
+                                target="_blank"
+                                rel="noopener"
+                                class="project__text-name"
+                                >Todo App</a
+                            >
+                            <p class="project__text-info">
+                                A React-based todo list app for adding,
+                                deleting, and completing tasks, with filter
+                                options, drag-and-drop functionality for
+                                reordering and light/dark mode.
+                            </p>
+                            <div class="project__text-lang">
+                                <span>Html</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>ReactJS</span>
+                            </div>
+                            <div class="project__text-links">
+                                <a
+                                    href="https://github.com/Drougnov/todo-app-main"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Github code link"
+                                    ><i class="fa-brands fa-github"></i
+                                ></a>
+                                <a
+                                    href="https://drougnov.github.io/todo-app-main"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="website link"
+                                    ><i class="fa-solid fa-eye"></i
+                                ></a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="project translateUp">
+                        <a
+                            href="https://drougnov.github.io/url-shortening-api-master"
+                            target="_blank"
+                            rel="noopener"
+                            class="project__image"
+                        >
+                            <img
+                                src="./images/shortly.jpg"
+                                alt="Shortly: URL Shortener"
+                            />
+                        </a>
+                        <section class="project__text">
+                            <span class="project__text-type">API</span>
+                            <a
+                                href="https://drougnov.github.io/url-shortening-api-master"
+                                target="_blank"
+                                rel="noopener"
+                                class="project__text-name"
+                                >Shortly: URL Shortener</a
+                            >
+                            <p class="project__text-info">
+                                This is a responsive URL shortener with
+                                shortcode API. Features include shortening valid
+                                URLs, copy-to-clipboard functionality, and error
+                                messaging.
+                            </p>
+                            <div class="project__text-lang">
+                                <span>Html</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Shrtcode API</span>
+                            </div>
+                            <div class="project__text-links">
+                                <a
+                                    href="https://github.com/Drougnov/url-shortening-api-master"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Github code link"
+                                    ><i class="fa-brands fa-github"></i
+                                ></a>
+                                <a
+                                    href="https://drougnov.github.io/url-shortening-api-master"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="website link"
+                                    ><i class="fa-solid fa-eye"></i
+                                ></a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <a
+                    href="https://github.com/Drougnov?tab=repositories"
+                    target="_blank"
+                    rel="noopener"
+                    class="work__view-more translateUp"
+                    >View more</a
+                >
+            </div>
+        </main>
+        <footer>
+            <section class="contact translateUp" id="contact">
+                <h2>Get in touch</h2>
+                <p>
+                    Got a proposal or want to say hello? Send a mail. I'll
+                    respond as fast as I can.
+                </p>
+                <a
+                    href="mailto:joseph.adeabah@dpschool.io"
+                    aria-label="send email"
+                    ><i class="fa-solid fa-paper-plane"></i
+                ></a>
+            </section>
+            <ul class="footer__links translateUp">
+                <li>
+                    <a
+                        href="https://www.pnpmmedia.com/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Pnpm Media"
+                        ><i class="fa-solid fa-code"></i
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/josephadeabah"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="GitHub"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="https://x.com/abe_ansah"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Twitter"
+                        ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/josephadeabah/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn"
+                        ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                </li>
+            </ul>
+            <p class="footer__text">
+                Coded with <span class="footer__text-heart">❤</span> by
+                <a href="https://github.com/josephadeabah">Joseph Adeabah</a>.
+            </p>
+        </footer>
+    </body>
+</html>
