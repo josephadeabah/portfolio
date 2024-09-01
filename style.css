@@ -414,7 +414,7 @@ nav.active .hamburger::after {
   content: "";
   width: 13px;
   height: 0;
-  background: #edb98a;
+  background: #5c4033;
   -webkit-border-radius: 0 0 50% 50%;
   -moz-border-radius: 0 0 50% 50%;
   -ms-border-radius: 0 0 50% 50%;
