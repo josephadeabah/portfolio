@@ -11,8 +11,21 @@ export const metadata: Metadata = {
   description: 'Portfolio and CV of Joseph Adeabah, an AI/ML-focused software engineer building useful production software.',
   generator: 'Joseph',
   icons: {
-    icon: '/images/Joseph.png',
-    apple: '/apple-icon.png',
+    icon: [
+      {
+        url: '/images/Joseph.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/images/Joseph.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/images/logo.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/images/Joseph.png',
   },
 }
 
