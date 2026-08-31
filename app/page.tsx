@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const skills = [
   'Python', 'FastAPI', 'Ruby on Rails', 'Node.js', 'Next.js', 'React', 'TypeScript',
   'PostgreSQL', 'SQLAlchemy', 'LLM APIs', 'Embeddings', 'Semantic Search', 'Docker', 'AWS', 'Supabase', 'Tailwind CSS',
@@ -110,20 +112,122 @@ export default function Page() {
       </header>
 
       <section id="top" className="grid gap-10 border-b border-border py-16 sm:py-24 md:grid-cols-[1.3fr_0.7fr] md:gap-16">
-        <div><p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">AI/ML Engineer · Backend Software Engineer</p><h1 className="max-w-3xl text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.055em] sm:text-7xl">Building useful software for a more connected Africa.</h1><p className="mt-7 max-w-xl text-pretty text-base leading-7 text-muted-foreground">I&apos;m Joseph Adeabah, an AI/ML-focused software engineer with 5+ years of experience building production systems across fintech, health-tech, education, and real-time applications.</p><div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium"><a className="underline decoration-muted-foreground underline-offset-4" href="mailto:ansahadeabaj45@gmail.com">Email me ↗</a><a className="underline decoration-muted-foreground underline-offset-4" href="https://github.com/josephadeabah">GitHub ↗</a><a className="underline decoration-muted-foreground underline-offset-4" href="https://linkedin.com/in/joseph-adeabah">LinkedIn ↗</a></div></div>
-        <aside className="flex flex-col justify-end border-l border-border pl-6 text-sm text-muted-foreground"><p>Based in</p><p className="mt-1 text-foreground">Accra, Ghana</p><p className="mt-6">Currently</p><p className="mt-1 text-foreground">Building AI-powered products</p><a className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground" href="/joseph-adeabah-resume.pdf" download>Download CV <span aria-hidden="true">↓</span></a></aside>
+        <div>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">AI/ML Engineer · Backend Software Engineer</p>
+          <h1 className="max-w-3xl text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.055em] sm:text-7xl">Building useful software for a more connected Africa.</h1>
+          <p className="mt-7 max-w-xl text-pretty text-base leading-7 text-muted-foreground">I&apos;m Joseph Adeabah, an AI/ML-focused software engineer with 5+ years of experience building production systems across fintech, health-tech, education, and real-time applications.</p>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
+            <a className="underline decoration-muted-foreground underline-offset-4" href="mailto:ansahadeabaj45@gmail.com">Email me ↗</a>
+            <a className="underline decoration-muted-foreground underline-offset-4" href="https://github.com/josephadeabah">GitHub ↗</a>
+            <a className="underline decoration-muted-foreground underline-offset-4" href="https://linkedin.com/in/joseph-adeabah">LinkedIn ↗</a>
+          </div>
+        </div>
+        
+        <aside className="flex flex-col items-center justify-end border-l border-border pl-6 text-sm text-muted-foreground">
+          {/* Profile Image */}
+          <div className="mb-6 h-32 w-32 overflow-hidden rounded-full border-2 border-border/50">
+            <Image
+              src="/images/Joseph.png"
+              alt="Joseph Adeabah"
+              width={128}
+              height={128}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
+          
+          <p>Based in</p>
+          <p className="mt-1 text-foreground">Accra, Ghana</p>
+          <p className="mt-6">Currently</p>
+          <p className="mt-1 text-foreground">Building AI-powered products</p>
+          <a className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground" href="/joseph-adeabah-resume.pdf" download>
+            Download CV <span aria-hidden="true">↓</span>
+          </a>
+        </aside>
       </section>
 
-      <section className="grid gap-8 border-b border-border py-12 md:grid-cols-[0.7fr_1.3fr]"><SectionTitle>Core toolkit</SectionTitle><div className="flex flex-wrap content-start gap-2">{skills.map((skill) => <span key={skill} className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground">{skill}</span>)}</div></section>
+      <section className="grid gap-8 border-b border-border py-12 md:grid-cols-[0.7fr_1.3fr]">
+        <SectionTitle>Core toolkit</SectionTitle>
+        <div className="flex flex-wrap content-start gap-2">
+          {skills.map((skill) => (
+            <span key={skill} className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground">{skill}</span>
+          ))}
+        </div>
+      </section>
 
-      <section id="experience" className="border-b border-border py-14"><SectionTitle>Experience</SectionTitle><div className="space-y-10">{experience.map((item) => <article key={item.role} className="grid gap-2 md:grid-cols-[0.7fr_1.3fr] md:gap-8"><p className="font-mono text-xs text-muted-foreground">{item.dates}</p><div><h3 className="text-lg font-semibold tracking-tight">{item.role}</h3><p className="mt-1 text-sm text-muted-foreground">{item.company}</p><p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{item.details}</p>{item.links && <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium">{item.links.map(([label, url]) => <a key={label} className="underline underline-offset-4" href={url} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>}</div></article>)}</div></section>
+      <section id="experience" className="border-b border-border py-14">
+        <SectionTitle>Experience</SectionTitle>
+        <div className="space-y-10">
+          {experience.map((item) => (
+            <article key={item.role} className="grid gap-2 md:grid-cols-[0.7fr_1.3fr] md:gap-8">
+              <p className="font-mono text-xs text-muted-foreground">{item.dates}</p>
+              <div>
+                <h3 className="text-lg font-semibold tracking-tight">{item.role}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{item.company}</p>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{item.details}</p>
+                {item.links && (
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium">
+                    {item.links.map(([label, url]) => (
+                      <a key={label} className="underline underline-offset-4" href={url} target="_blank" rel="noreferrer">{label} ↗</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <section id="projects" className="border-b border-border py-14"><div className="flex items-end justify-between gap-4"><SectionTitle>Selected projects</SectionTitle><span className="mb-8 font-mono text-xs text-muted-foreground">05 / live work</span></div><div className="grid gap-6">{projects.map((project) => <article key={project.name} className="group grid overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-[1.15fr_0.85fr]"><ProjectPreview type={project.preview} /><div className="flex flex-col justify-between p-6 sm:p-8"><div><p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">{project.type}</p><h3 className="mt-3 text-2xl font-semibold tracking-tight">{project.name}</h3><p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">{project.description}</p></div><div className="mt-10"><p className="mb-4 text-xs text-muted-foreground">{project.stack}</p><a className="text-sm font-semibold underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a></div></div></article>)}</div></section>
+      <section id="projects" className="border-b border-border py-14">
+        <div className="flex items-end justify-between gap-4">
+          <SectionTitle>Selected projects</SectionTitle>
+          <span className="mb-8 font-mono text-xs text-muted-foreground">05 / live work</span>
+        </div>
+        <div className="grid gap-6">
+          {projects.map((project) => (
+            <article key={project.name} className="group grid overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-[1.15fr_0.85fr]">
+              <ProjectPreview type={project.preview} />
+              <div className="flex flex-col justify-between p-6 sm:p-8">
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">{project.type}</p>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight">{project.name}</h3>
+                  <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">{project.description}</p>
+                </div>
+                <div className="mt-10">
+                  <p className="mb-4 text-xs text-muted-foreground">{project.stack}</p>
+                  <a className="text-sm font-semibold underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <section className="grid gap-8 border-b border-border py-14 md:grid-cols-[0.7fr_1.3fr]"><SectionTitle>Education & programs</SectionTitle><div className="space-y-5 text-sm"><div><p className="font-semibold">BSc Computer Science</p><p className="text-muted-foreground">University of Energy and Natural Resources</p></div><div><p className="font-semibold">AWS AI & ML Scholars Program</p><p className="text-muted-foreground">Udacity · March 2026</p></div><div><p className="font-semibold">Digital Product School</p><p className="text-muted-foreground">UnternehmerTUM · Munich · 2023</p></div></div></section>
+      <section className="grid gap-8 border-b border-border py-14 md:grid-cols-[0.7fr_1.3fr]">
+        <SectionTitle>Education & programs</SectionTitle>
+        <div className="space-y-5 text-sm">
+          <div>
+            <p className="font-semibold">BSc Computer Science</p>
+            <p className="text-muted-foreground">University of Energy and Natural Resources</p>
+          </div>
+          <div>
+            <p className="font-semibold">AWS AI & ML Scholars Program</p>
+            <p className="text-muted-foreground">Udacity · March 2026</p>
+          </div>
+          <div>
+            <p className="font-semibold">Digital Product School</p>
+            <p className="text-muted-foreground">UnternehmerTUM · Munich · 2023</p>
+          </div>
+        </div>
+      </section>
 
-      <footer id="contact" className="flex flex-col gap-5 py-12 sm:flex-row sm:items-end sm:justify-between"><div><p className="text-2xl font-semibold tracking-tight">Have a meaningful problem?</p><a className="mt-2 inline-block text-sm text-muted-foreground underline underline-offset-4" href="mailto:ansahadeabaj45@gmail.com">ansahadeabaj45@gmail.com</a></div><p className="font-mono text-xs text-muted-foreground">© 2026 Joseph Adeabah</p></footer>
+      <footer id="contact" className="flex flex-col gap-5 py-12 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-2xl font-semibold tracking-tight">Have a meaningful problem?</p>
+          <a className="mt-2 inline-block text-sm text-muted-foreground underline underline-offset-4" href="mailto:ansahadeabaj45@gmail.com">ansahadeabaj45@gmail.com</a>
+        </div>
+        <p className="font-mono text-xs text-muted-foreground">© 2026 Joseph Adeabah</p>
+      </footer>
     </main>
   )
 }
-
