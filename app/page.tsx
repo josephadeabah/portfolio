@@ -81,7 +81,7 @@ const projects = [
     name: 'Dreston Elite Montessori',
     type: 'Offline-first school management',
     description: 'Reliable school operations for records, attendance, fees, and parent communication—even offline.',
-    url: 'https://dreston-elite-montessori.vercel.app/login',
+    url: 'https://dreston-school-app-ruddy.vercel.app/login',
     stack: 'Next.js · FastAPI · Supabase · IndexedDB',
     preview: 'school',
   },
