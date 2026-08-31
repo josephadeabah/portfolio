@@ -125,7 +125,7 @@ export default function Page() {
         
         <aside className="flex flex-col items-center justify-end border-l border-border pl-6 text-sm text-muted-foreground">
           {/* Profile Image */}
-          <div className="mb-6 h-32 w-32 overflow-hidden rounded-full border-2 border-border/50">
+          <div className="mb-6 h-64 w-64 overflow-hidden rounded-full border-2 border-border/50">
             <Image
               src="/images/Joseph.png"
               alt="Joseph Adeabah"
