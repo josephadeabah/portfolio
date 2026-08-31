@@ -1,0 +1,160 @@
+
+
+JOSEPH ADEABAH 
+AI/ML ENGINEER | BACKEND SOFTWARE ENGINEER 
+Accra, Ghana | +233 200 415 683 | ansahadeabaj45@gmail.com | Portfolio: adeaba.vercel.app 
+GitHub: github.com/josephadeabah | LinkedIn: linkedin.com/in/joseph-adeab 
+PROFESSIONAL SUMMARY 
+AI/ML-focused Software Engineer with 5+ years of experience building production software and 
+AI-powered applications across fintech, health-tech, education, and real-time systems. Hands-on 
+experience with Python, FastAPI, LLM APIs, recommendation systems, embeddings, 
+semantic search, OCR, structured LLM extraction, conversational AI, PostgreSQL, 
+Docker, and cloud deployment. 
+Experienced in building reliable AI application architectures that combine LLM inference, 
+structured data, deterministic business rules, validation, external APIs, and provider fallback 
+strategies. Strong backend engineering foundation spanning REST APIs, database design, 
+authentication, asynchronous processing, distributed systems, offline-first architectures, CI/CD, 
+and production troubleshooting. 
+TECHNICAL SKILLS 
+AI/ML & Generative AI: LLM APIs, Qwen, Llama, OpenAI, Anthropic, DeepInfra, Prompt 
+Engineering, NLP, Embeddings, Semantic Search, Recommendation Systems, Structured LLM 
+Extraction, OCR, Tesseract, Conversational AI 
+AI Engineering: AI Application Development, Hybrid AI Workflows, Provider Fallback 
+Strategies, Heuristic Matching, Response Validation, Confidence-Based Review, Document 
+Intelligence, Retrieval Workflows, Deterministic Business Rules 
+Backend: Python, FastAPI, Ruby on Rails, Node.js, Express, NestJS, REST APIs, GraphQL, 
+WebSockets, Microservices, SQLAlchemy 
+Frontend: React, Next.js, TypeScript, JavaScript, Zustand, Tailwind CSS, Component 
+Architecture 
+Data & Infrastructure: PostgreSQL, MySQL, MongoDB, Redis, Supabase, Docker, AWS, 
+EC2, S3, Linux, Nginx, GitHub Actions, Vercel, Northflank, OVHCloud 
+Distributed Systems: Offline-First Architecture, Service Workers, IndexedDB, Outbox Pattern, 
+Idempotency, Synchronization, Asynchronous Processing 
+
+Voice AI: GPT-Realtime, Whisper, Telnyx, Twilio Voice APIs, Speech-to-Text, Real-Time 
+Audio Streaming, Voice Webhooks 
+ 
+PROFESSIONAL EXPERIENCE 
+PRODUCT & ENGINEERING LEAD 
+BantuHive Ltd | Takoradi, Ghana 
+October 2024 – April 2026 
+ Led engineering for a peer-to-peer financial investment and capital distribution platform 
+supporting payments, KYC onboarding, investment workflows, and financial 
+transactions. 
+ Designed backend services using Ruby on Rails, Node.js, and microservice-oriented 
+architecture. 
+ Integrated Paystack and Stripe payment APIs with webhook handling, idempotency, 
+retries, and failure-handling workflows. 
+ Designed transaction workflows resilient to duplicate requests, unreliable external 
+services, and asynchronous events. 
+ Implemented AI-assisted fraud detection workflows using LLM APIs to identify 
+potentially suspicious transaction patterns and support transaction review. 
+ Optimized database queries and backend services, improving application response times 
+by approximately 40%. 
+ Translated business requirements into technical specifications, system designs, and 
+implementation plans while contributing to architecture decisions, code reviews, 
+debugging, and production delivery. 
+SOFTWARE ENGINEER 
+Amalitech Services GmbH | Takoradi, Ghana 
+October 2021 – September 2024 
+ Built and maintained production full-stack applications using React, Next.js, TypeScript, 
+and Node.js. 
+ Developed REST APIs and backend integrations supporting production applications and 
+external services. 
+ Designed reusable frontend components and application patterns that improved 
+development consistency and maintainability. 
+ Refactored legacy React applications from class-based components to functional 
+components and hooks. 
+ Implemented CI/CD pipelines using GitHub Actions for application testing and 
+deployment. 
+
+ Worked with AWS and Vercel deployment environments and production infrastructure. 
+ Collaborated with international engineering and product teams across multiple time zones 
+and participated in code reviews, debugging, Agile development, and production issue 
+resolution. 
+ 
+AI ENGINEERING EXPERIENCE 
+AI ENGINEER INTERN — AI PRODUCT 
+MANAGEMENT PROGRAM 
+Product Manager Accelerator | Remote 
+June 2026 – Present 
+ Contributed to MyHealthNode AI, an AI-enabled health platform spanning LLM 
+integrations, document intelligence, OCR, semantic search, embeddings, conversational 
+AI, and backend services. 
+ Designed AI workflows combining model inference with structured data, application 
+logic, validation, and deterministic business rules. 
+ Contributed across Python/FastAPI backend development, frontend engineering, AI 
+integrations, document processing, voice AI, and cloud deployment. 
+ Collaborated with product and engineering teams to translate real-world healthcare 
+workflows into technical requirements and working AI-powered features. 
+ 
+SELECTED AI & SOFTWARE PROJECTS 
+LEXEP — AI-POWERED OPPORTUNITY & 
+MENTORSHIP PLATFORM 
+AI-Powered Career & Opportunity Matching Platform | August 2026 – Present 
+ Built a full-stack platform connecting African youth with internships, mentors, and 
+community-funded grants using Next.js, TypeScript, FastAPI, Python, SQLAlchemy, 
+and PostgreSQL. 
+ Designed and implemented an AI-powered recommendation engine that matches users 
+with relevant opportunities and mentors based on profile information, skills, interests, and 
+career goals. 
+
+ Built a multi-provider LLM architecture using Qwen through DeepInfra, with 
+OpenAI and Anthropic fallback providers and a deterministic heuristic matching 
+strategy for reliable recommendations. 
+ Designed hybrid recommendation workflows combining LLM-based matching, 
+structured profile data, application logic, deterministic business rules, and provider 
+fallback mechanisms. 
+ Implemented role-aware workflows for learners, mentors, companies, and administrators, 
+including internship applications, mentorship requests, assessments, interviews, grants, 
+and applicant management. 
+ Developed FastAPI REST APIs with JWT authentication, role-based authorization, 
+SQLAlchemy, and PostgreSQL. 
+ Engineered an offline-first architecture using Service Workers, IndexedDB, an outbox 
+synchronization pattern, and idempotency keys to safely queue and synchronize critical 
+user actions during connectivity loss. 
+MYHEALTHNODE AI — FORMERLY 
+HEALTHBUDDYAI 
+AI-Powered Personal Health Command Center | June 2026 – Present 
+ Designed an AI-powered document intelligence pipeline combining Tesseract OCR, 
+LLM processing, structured extraction, validation, and confidence-based review. 
+ Built workflows transforming unstructured healthcare documents into structured 
+information through OCR preprocessing, text extraction, LLM inference, response 
+parsing, validation, and review. 
+ Implemented hybrid AI inference using DeepInfra and Meta Llama models with 
+provider fallback strategies for reliability. 
+ Developed AI-assisted medication adherence workflows combining embeddings, 
+semantic search, deterministic business rules, and application logic. 
+ Built backend AI services using Python, FastAPI, PostgreSQL, and SQLAlchemy. 
+ Designed conversational voice workflows integrating Telnyx, Twilio, GPT-Realtime, 
+and Whisper, including speech-to-text, real-time LLM interactions, medication 
+reminders, adherence tracking, and caregiver escalation. 
+ Containerized and deployed services using Docker on a Linux-based OVHCloud 
+environment. 
+DRESTON ELITE MONTESSORI SCHOOL — OFFLINE-
+FIRST MANAGEMENT SYSTEM 
+Full-Stack Offline-First School Management Platform | June 2026 
+ Built a full-stack school management platform using React, Next.js, TypeScript, FastAPI, 
+Supabase, and PostgreSQL. 
+
+ Engineered an offline-first architecture using Service Workers, IndexedDB, outbox 
+synchronization, and client-side deduplication to maintain reliable workflows during 
+connectivity loss. 
+ Designed data models and role-based workflows for student records, classes, attendance, 
+fee payments, balances, and parent-school communication. 
+ Implemented backend-enforced RBAC and integrated Arkesel SMS and Resend Email 
+for communication workflows. 
+ Deployed the application using Supabase and Northflank. 
+ 
+EDUCATION 
+Bachelor of Science in Computer Science 
+University of Energy and Natural Resources (UENR) | Sunyani, Ghana 
+CERTIFICATIONS & PROGRAMS 
+AWS AI & ML Scholars Program — Udacity | March 2026 
+Product Manager Accelerator — AI Product Management Program — 2026 
+Digital Product School — UnternehmerTUM | Munich, Germany | 2023 
+ADDITIONAL 
+Languages: English (Fluent), Twi (Native), Nzema (Native) 
+Interests: AI Engineering, Generative AI, Distributed Systems, Developer Tools, Technology 
+for Africa 
+ 

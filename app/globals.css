@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+}
+
+:root {
+  color-scheme: light;
+  --background: oklch(0.985 0 0);
+  --foreground: oklch(0.14 0 0);
+  --card: oklch(0.97 0 0);
+  --card-foreground: oklch(0.14 0 0);
+  --muted: oklch(0.94 0 0);
+  --muted-foreground: oklch(0.46 0 0);
+  --primary: oklch(0.14 0 0);
+  --primary-foreground: oklch(0.98 0 0);
+  --border: oklch(0.87 0 0);
+  --ring: oklch(0.5 0 0);
+}
+
+* { @apply border-border; }
+html { scroll-behavior: smooth; }
+body { @apply bg-background text-foreground font-sans; }
+::selection { background: oklch(0.14 0 0); color: oklch(0.98 0 0); }
+a { transition: opacity 180ms ease; }
+a:hover { opacity: 0.62; }
+
+@layer base { * { @apply outline-ring/50; } }
+
+/* stylelint-disable */
+body { line-height: 1.5; }
