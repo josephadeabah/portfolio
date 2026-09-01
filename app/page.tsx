@@ -41,6 +41,29 @@ const experience: Experience[] = [
     role: 'AI Engineer Intern — AI Product Management Program',
     company: 'Product Manager Accelerator · Remote',
     details: 'Contributing to MyHealthNode AI across document intelligence, OCR, semantic search, conversational AI, voice AI, and Python/FastAPI services. Translating real healthcare workflows into reliable AI-powered features.',
+    links: [
+      ['AI Engineering Bootcamp Certificate', 'https://drive.google.com/file/d/1q-uZ65JfEo9vtuh2vxzemfl6z0cbO8Nc/view?usp=sharing'],
+      ['Recommendation from Dr. Nancy Li', 'https://drive.google.com/file/d/1toItdgEKdDY045v6YOLrM3a63OL-tzOw/view?usp=sharing'],
+    ],
+  },
+]
+
+// Add awards section data
+type Award = {
+  year: string
+  title: string
+  organization: string
+  description: string
+  link?: string
+}
+
+const awards: Award[] = [
+  {
+    year: '2025',
+    title: 'Tony Elumelu Entrepreneurship Programme',
+    organization: 'Tony Elumelu Foundation',
+    description: 'Selected as one of the entrepreneurs to receive $5,000 in seed funding to scale BantuHive Ltd, an AI-powered crowdfunding and peer-to-peer capital infrastructure platform for African communities, startups, and SMEs.',
+    link: 'https://drive.google.com/file/d/1a5hLDypF4vOfuQabOJ4fhs8RzdbcPwXE/view?usp=sharing',
   },
 ]
 
@@ -108,7 +131,7 @@ export default function Page() {
     <main className="mx-auto max-w-5xl px-6 py-8 sm:px-10 sm:py-12">
       <header className="flex items-center justify-between border-b border-border pb-5">
         <a className="font-mono text-sm font-semibold tracking-tight" href="#top">JA<span className="text-muted-foreground">/</span>26</a>
-        <nav className="flex gap-5 text-xs font-medium text-muted-foreground sm:gap-8"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+        <nav className="flex gap-5 text-xs font-medium text-muted-foreground sm:gap-8"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#contact">Contact</a></nav>
       </header>
 
       <section id="top" className="grid gap-10 border-b border-border py-16 sm:py-24 md:grid-cols-[1.3fr_0.7fr] md:gap-16">
@@ -203,6 +226,28 @@ export default function Page() {
         </div>
       </section>
 
+      {/* New Awards Section */}
+      <section id="awards" className="border-b border-border py-14">
+        <SectionTitle>Awards & Recognition</SectionTitle>
+        <div className="space-y-6">
+          {awards.map((award) => (
+            <article key={award.title} className="grid gap-2 md:grid-cols-[0.7fr_1.3fr] md:gap-8">
+              <p className="font-mono text-xs text-muted-foreground">{award.year}</p>
+              <div>
+                <h3 className="text-lg font-semibold tracking-tight">{award.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{award.organization}</p>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{award.description}</p>
+                {award.link && (
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium">
+                    <a className="underline underline-offset-4" href={award.link} target="_blank" rel="noreferrer">Certificate ↗</a>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="grid gap-8 border-b border-border py-14 md:grid-cols-[0.7fr_1.3fr]">
         <SectionTitle>Education & programs</SectionTitle>
         <div className="space-y-5 text-sm">
@@ -217,6 +262,10 @@ export default function Page() {
           <div>
             <p className="font-semibold">Digital Product School</p>
             <p className="text-muted-foreground">UnternehmerTUM · Munich · 2023</p>
+          </div>
+          <div>
+            <p className="font-semibold">Tony Elumelu Entrepreneurship Programme</p>
+            <p className="text-muted-foreground">Tony Elumelu Foundation · 2025</p>
           </div>
         </div>
       </section>
