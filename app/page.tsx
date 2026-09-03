@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Image from "next/image";
 
 const skills = [
@@ -48,7 +51,6 @@ const experience: Experience[] = [
   },
 ]
 
-// Add awards section data
 type Award = {
   year: string
   title: string
@@ -73,8 +75,9 @@ const projects = [
     type: 'Crowdfunding & capital infrastructure',
     description: 'AI-powered crowdfunding and peer-to-peer capital infrastructure helping communities, startups, SMEs, and enterprises raise and manage capital digitally.',
     url: 'https://crowdfundn.vercel.app',
-    stack: 'Next.js Ruby on Rails · AI · Fintech · Paystack',
+    stack: 'Next.js · Ruby on Rails · AI · Fintech · Paystack',
     preview: 'bantuhive',
+    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
   },
   {
     name: 'PNPM Media',
@@ -83,6 +86,7 @@ const projects = [
     url: 'https://pnpmmedia.com',
     stack: 'Vue.js · TypeScript · Storyblok · Appwrite',
     preview: 'blog',
+    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
   },
   {
     name: 'LEXEP',
@@ -91,6 +95,7 @@ const projects = [
     url: 'https://lexep.vercel.app',
     stack: 'Next.js · FastAPI · PostgreSQL',
     preview: 'lexep',
+    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
   },
   {
     name: 'MyHealthNode AI',
@@ -99,6 +104,7 @@ const projects = [
     url: 'https://myhealthnode.ai',
     stack: 'Python · FastAPI · Llama · OCR',
     preview: 'health',
+    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
   },
   {
     name: 'Dreston Elite Montessori',
@@ -107,6 +113,7 @@ const projects = [
     url: 'https://dreston-school-app-ruddy.vercel.app/login',
     stack: 'Next.js · FastAPI · Supabase · IndexedDB',
     preview: 'school',
+    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
   },
 ]
 
@@ -127,7 +134,10 @@ function ProjectPreview({ type }: { type: string }) {
 }
 
 export default function Page() {
+  const [activeVideo, setActiveVideo] = useState<(typeof projects)[number] | null>(null)
+
   return (
+    <>
     <main className="mx-auto max-w-5xl px-6 py-8 sm:px-10 sm:py-12">
       <header className="flex items-center justify-between border-b border-border pb-5">
         <a className="font-mono text-sm font-semibold tracking-tight" href="#top">JA<span className="text-muted-foreground">/</span>26</a>
@@ -147,7 +157,6 @@ export default function Page() {
         </div>
         
         <aside className="flex flex-col items-center justify-end border-l border-border pl-6 text-sm text-muted-foreground">
-          {/* Profile Image */}
           <div className="mb-6 h-64 w-64 overflow-hidden rounded-full border-2 border-border/50">
             <Image
               src="/images/Joseph.png"
@@ -206,19 +215,32 @@ export default function Page() {
           <SectionTitle>Selected projects</SectionTitle>
           <span className="mb-8 font-mono text-xs text-muted-foreground">05 / live work</span>
         </div>
-        <div className="grid gap-6">
-          {projects.map((project) => (
-            <article key={project.name} className="group grid overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-[1.15fr_0.85fr]">
-              <ProjectPreview type={project.preview} />
-              <div className="flex flex-col justify-between p-6 sm:p-8">
+        <div className="divide-y divide-border border-y border-border">
+          {projects.map((project, index) => (
+            <article key={project.name} className="grid gap-5 py-7 md:grid-cols-[0.18fr_0.82fr] md:gap-8">
+              <p className="font-mono text-xs text-muted-foreground">0{index + 1}</p>
+              <div className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-start">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">{project.type}</p>
-                  <h3 className="mt-3 text-2xl font-semibold tracking-tight">{project.name}</h3>
-                  <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">{project.description}</p>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <h3 className="text-xl font-semibold tracking-tight">{project.name}</h3>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{project.type}</span>
+                  </div>
+                  <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{project.description}</p>
+                  <p className="mt-4 text-xs text-muted-foreground">{project.stack}</p>
+                  <div className="mt-5 flex flex-wrap items-center gap-5 text-sm font-semibold">
+                    <a className="underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a>
+                    <button
+                      type="button"
+                      className="inline-flex items-center gap-2 text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:text-muted-foreground"
+                      onClick={() => setActiveVideo(project)}
+                    >
+                      <span className="grid size-5 place-items-center rounded-full border border-foreground text-[9px] no-underline" aria-hidden="true">▶</span>
+                      Watch walkthrough
+                    </button>
+                  </div>
                 </div>
-                <div className="mt-10">
-                  <p className="mb-4 text-xs text-muted-foreground">{project.stack}</p>
-                  <a className="text-sm font-semibold underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a>
+                <div className="h-28 w-40 shrink-0 overflow-hidden rounded-lg border border-border bg-muted sm:h-32 sm:w-48">
+                  <ProjectPreview type={project.preview} />
                 </div>
               </div>
             </article>
@@ -226,7 +248,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* New Awards Section */}
       <section id="awards" className="border-b border-border py-14">
         <SectionTitle>Awards & Recognition</SectionTitle>
         <div className="space-y-6">
@@ -278,5 +299,30 @@ export default function Page() {
         <p className="font-mono text-xs text-muted-foreground">© 2026 Joseph Adeabah</p>
       </footer>
     </main>
+    {activeVideo && (
+      <div className="fixed inset-0 z-50 grid place-items-center bg-foreground/80 p-4" role="dialog" aria-modal="true" aria-labelledby="video-dialog-title" onClick={() => setActiveVideo(null)}>
+        <div className="w-full max-w-3xl rounded-xl border border-border bg-background p-3 shadow-2xl sm:p-5" onClick={(event) => event.stopPropagation()}>
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Project walkthrough</p>
+              <h2 id="video-dialog-title" className="mt-1 text-lg font-semibold tracking-tight">{activeVideo.name}</h2>
+            </div>
+            <button type="button" className="rounded-full border border-border px-3 py-1.5 text-xs font-semibold hover:bg-muted" onClick={() => setActiveVideo(null)} aria-label="Close video preview">
+              Close
+            </button>
+          </div>
+          <div className="aspect-video overflow-hidden rounded-lg bg-foreground">
+            <iframe
+              className="size-full"
+              src={`https://www.youtube.com/embed/${activeVideo.video.split('v=')[1]}?autoplay=1`}
+              title={`${activeVideo.name} project walkthrough`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    )}
+    </>
   )
 }
