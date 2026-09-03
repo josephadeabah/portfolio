@@ -86,7 +86,7 @@ const projects = [
     url: 'https://pnpmmedia.com',
     stack: 'Vue.js · TypeScript · Storyblok · Appwrite',
     preview: 'blog',
-    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
+    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
   },
   {
     name: 'LEXEP',
@@ -95,7 +95,7 @@ const projects = [
     url: 'https://lexep.vercel.app',
     stack: 'Next.js · FastAPI · PostgreSQL',
     preview: 'lexep',
-    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
+    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
   },
   {
     name: 'MyHealthNode AI',
@@ -104,7 +104,7 @@ const projects = [
     url: 'https://myhealthnode.ai',
     stack: 'Python · FastAPI · Llama · OCR',
     preview: 'health',
-    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
+    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
   },
   {
     name: 'Dreston Elite Montessori',
@@ -113,7 +113,7 @@ const projects = [
     url: 'https://dreston-school-app-ruddy.vercel.app/login',
     stack: 'Next.js · FastAPI · Supabase · IndexedDB',
     preview: 'school',
-    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
+    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
   },
 ]
 
