@@ -77,7 +77,7 @@ const projects = [
     url: 'https://crowdfundn.vercel.app',
     stack: 'Next.js · Ruby on Rails · AI · Fintech · Paystack',
     preview: 'bantuhive',
-    video: 'https://www.youtube.com/watch?v=Ez7DlKSvEFY',
+    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
   },
   {
     name: 'PNPM Media',
