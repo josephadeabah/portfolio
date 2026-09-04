@@ -3,10 +3,52 @@
 import { useState } from 'react'
 import Image from "next/image";
 
-const skills = [
-  'Python', 'Pytorch', 'Numpy', 'FastAPI', 'Ruby on Rails', 'Node.js', 'Next.js', 'React', 'TypeScript',
-  'PostgreSQL', 'SQLAlchemy', 'LLM APIs', 'Embeddings', 'Semantic Search', 'Docker', 'AWS', 'Supabase', 'Tailwind CSS', 'CI/CD Pipelines', 'Linux/Linux Server Administration',
-]
+const skills = {
+  softwareEngineering: {
+    title: 'Software Engineering',
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Python', 'FastAPI', 'Node.js', 'Express', 'NestJS', 'Ruby on Rails', 'REST APIs', 'GraphQL', 'WebSockets', 'Microservices']
+  },
+  linuxSystems: {
+    title: 'Linux, Systems & Server Administration',
+    skills: ['Linux', 'Linux Server Administration', 'Server Deployment', 'Server Troubleshooting', 'SSH', 'Nginx', 'Docker', 'Docker Compose', 'Process/Service Troubleshooting', 'Production Support', 'GitHub Actions']
+  },
+  networking: {
+    title: 'Networking & Connectivity',
+    skills: ['TCP/IP', 'DNS', 'SSL/TLS', 'SSH', 'VPN', 'Firewall Configuration']
+  },
+  itHardware: {
+    title: 'IT Hardware & Technical Support',
+    skills: ['IT Hardware Diagnostics', 'Hardware Troubleshooting', 'Component Replacement', 'Laptop Hardware Repairs', 'Keyboard and Screen Replacement', 'Server Hardware Troubleshooting', 'Basic Network Hardware Setup']
+  },
+  cloudInfrastructure: {
+    title: 'Cloud & Infrastructure',
+    skills: ['AWS', 'EC2', 'S3', 'Docker', 'Nginx', 'Vercel', 'Northflank', 'OVHCloud', 'GitHub Actions', 'Cloud Deployment', 'Production Infrastructure']
+  },
+  backendDatabases: {
+    title: 'Backend, Databases & APIs',
+    skills: ['Python', 'FastAPI', 'Node.js', 'Express', 'Ruby on Rails', 'PostgreSQL', 'Redis', 'Supabase', 'SQLAlchemy', 'Webhooks', 'Third-Party API Integration']
+  },
+  aiEmerging: {
+    title: 'AI & Emerging Technology',
+    skills: ['LLM APIs', 'Generative AI', 'AI Application Development', 'OCR', 'Embeddings', 'Semantic Search', 'Voice AI']
+  },
+  reliability: {
+    title: 'Reliability & Distributed Systems',
+    skills: ['Offline-First Systems', 'Service Workers', 'IndexedDB', 'Outbox Pattern', 'Idempotency', 'Client-Side Deduplication', 'Conflict Handling', 'Real-Time Synchronization', 'Asynchronous Processing', 'Failure Handling']
+  },
+  devTools: {
+    title: 'Engineering & Development Tools',
+    skills: ['Git', 'GitHub', 'VS Code', 'Claude Code', 'GitHub Copilot', 'Codex', 'Jest', 'Unit Testing', 'Integration Testing', 'API Testing', 'CI/CD', 'Debugging', 'Production Troubleshooting']
+  },
+  productDesign: {
+    title: 'Product Design & Prototyping',
+    skills: ['Figma', 'Google Stitch', 'UI/UX Design', 'Wireframing', 'Prototyping', 'User Research', 'Design Systems', 'User Flows', 'Interaction Design']
+  },
+  softSkills: {
+    title: 'Project Delivery & Soft Skills',
+    skills: ['Agile Methodology', 'Scrum', 'Kanban', 'Sprint Planning', 'Project Management', 'Team Leadership', 'Cross-functional Collaboration', 'Stakeholder Communication', 'Technical Documentation', 'Mentoring', 'Problem Solving', 'Critical Thinking', 'Time Management', 'Remote Collaboration']
+  }
+}
 
 type Experience = {
   dates: string
@@ -141,7 +183,7 @@ export default function Page() {
     <main className="mx-auto max-w-5xl px-6 py-8 sm:px-10 sm:py-12">
       <header className="flex items-center justify-between border-b border-border pb-5">
         <a className="font-mono text-sm font-semibold tracking-tight" href="#top">JA<span className="text-muted-foreground">/</span>26</a>
-        <nav className="flex gap-5 text-xs font-medium text-muted-foreground sm:gap-8"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#contact">Contact</a></nav>
+        <nav className="flex gap-5 text-xs font-medium text-muted-foreground sm:gap-8"><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#contact">Contact</a></nav>
       </header>
 
       <section id="top" className="grid gap-10 border-b border-border py-16 sm:py-24 md:grid-cols-[1.3fr_0.7fr] md:gap-16">
@@ -178,11 +220,18 @@ export default function Page() {
         </aside>
       </section>
 
-      <section className="grid gap-8 border-b border-border py-12 md:grid-cols-[0.7fr_1.3fr]">
-        <SectionTitle>Core toolkit</SectionTitle>
-        <div className="flex flex-wrap content-start gap-2">
-          {skills.map((skill) => (
-            <span key={skill} className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground">{skill}</span>
+      <section id="skills" className="border-b border-border py-14">
+        <SectionTitle>Technical Skills</SectionTitle>
+        <div className="space-y-8">
+          {Object.values(skills).map((category) => (
+            <div key={category.title} className="grid gap-3 md:grid-cols-[0.7fr_1.3fr] md:gap-8">
+              <h3 className="font-semibold text-sm text-foreground">{category.title}</h3>
+              <div className="flex flex-wrap content-start gap-2">
+                {category.skills.map((skill) => (
+                  <span key={skill} className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground">{skill}</span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
