@@ -16,10 +16,6 @@ const skills = {
     title: 'Networking & Connectivity',
     skills: ['TCP/IP', 'DNS', 'SSL/TLS', 'SSH', 'VPN', 'Firewall Configuration']
   },
-  itHardware: {
-    title: 'IT Hardware & Technical Support',
-    skills: ['IT Hardware Diagnostics', 'Hardware Troubleshooting', 'Component Replacement', 'Laptop Hardware Repairs', 'Keyboard and Screen Replacement', 'Server Hardware Troubleshooting', 'Basic Network Hardware Setup']
-  },
   cloudInfrastructure: {
     title: 'Cloud & Infrastructure',
     skills: ['AWS', 'EC2', 'S3', 'Docker', 'Nginx', 'Vercel', 'Northflank', 'OVHCloud', 'GitHub Actions', 'Cloud Deployment', 'Production Infrastructure']
@@ -46,7 +42,7 @@ const skills = {
   },
   softSkills: {
     title: 'Project Delivery & Soft Skills',
-    skills: ['Agile Methodology', 'Scrum', 'Kanban', 'Sprint Planning', 'Project Management', 'Team Leadership', 'Cross-functional Collaboration', 'Stakeholder Communication', 'Technical Documentation', 'Mentoring', 'Problem Solving', 'Critical Thinking', 'Time Management', 'Remote Collaboration']
+    skills: ['Agile Methodology', 'Scrum', 'Sprint Planning', 'Project Management', 'Team Leadership', 'Cross-functional Collaboration', 'Stakeholder Communication', 'Technical Documentation', 'Mentoring', 'Problem Solving', 'Critical Thinking', 'Time Management', 'Remote Collaboration', 'Entrepreneurship']
   }
 }
 
