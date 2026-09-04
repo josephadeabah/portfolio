@@ -104,7 +104,7 @@ const projects = [
     url: 'https://myhealthnode.ai',
     stack: 'Python · FastAPI · Llama · OCR',
     preview: 'health',
-    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
+    video: 'https://www.youtube.com/watch?v=-kouMOE_Zgo',
   },
   {
     name: 'Dreston Elite Montessori',
