@@ -86,7 +86,7 @@ const projects = [
     url: 'https://pnpmmedia.com',
     stack: 'Vue.js · TypeScript · Storyblok · Appwrite',
     preview: 'blog',
-    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
+    video: 'https://www.youtube.com/watch?v=0RtV_TG4PRE',
   },
   {
     name: 'LEXEP',
