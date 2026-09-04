@@ -113,7 +113,7 @@ const projects = [
     url: 'https://dreston-school-app-ruddy.vercel.app/login',
     stack: 'Next.js · FastAPI · Supabase · IndexedDB',
     preview: 'school',
-    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
+    video: 'https://www.youtube.com/watch?v=OXdrQ1Z1XG8',
   },
 ]
 
