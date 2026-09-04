@@ -18,7 +18,7 @@ const skills = {
   },
   cloudInfrastructure: {
     title: 'Cloud & Infrastructure',
-    skills: ['AWS', 'EC2', 'S3', 'Docker', 'Nginx', 'Vercel', 'Northflank', 'OVHCloud', 'GitHub Actions', 'Cloud Deployment', 'Production Infrastructure']
+    skills: ['AWS', 'EC2', 'S3', 'Google Cloud Platform', 'Docker', 'Nginx', 'Vercel', 'Northflank', 'OVHCloud', 'GitHub Actions', 'Cloud Deployment', 'Production Infrastructure']
   },
   backendDatabases: {
     title: 'Backend, Databases & APIs',
