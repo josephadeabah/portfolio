@@ -95,7 +95,7 @@ const projects = [
     url: 'https://lexep.vercel.app',
     stack: 'Next.js · FastAPI · PostgreSQL',
     preview: 'lexep',
-    video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
+    video: 'https://www.youtube.com/watch?v=ORghchtMU4s',
   },
   {
     name: 'MyHealthNode AI',
