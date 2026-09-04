@@ -8,7 +8,7 @@ const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono'
 
 export const metadata: Metadata = {
   title: 'Joseph Adeabah — AI/ML Engineer',
-  description: 'Portfolio and CV of Joseph Adeabah, an AI/ML-focused software engineer building useful production software.',
+  description: 'Portfolio and CV of Joseph Adeabah, an Fullstack, AI/ML-focused software engineer building useful production software.',
   generator: 'Joseph',
   icons: {
     icon: [
