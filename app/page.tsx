@@ -4,8 +4,8 @@ import { useState } from 'react'
 import Image from "next/image";
 
 const skills = [
-  'Python', 'Pytorch', 'FastAPI', 'Ruby on Rails', 'Node.js', 'Next.js', 'React', 'TypeScript',
-  'PostgreSQL', 'SQLAlchemy', 'LLM APIs', 'Embeddings', 'Semantic Search', 'Docker', 'AWS', 'Supabase', 'Tailwind CSS', 'CI/CD Pipelines',
+  'Python', 'Pytorch', 'Numpy', 'FastAPI', 'Ruby on Rails', 'Node.js', 'Next.js', 'React', 'TypeScript',
+  'PostgreSQL', 'SQLAlchemy', 'LLM APIs', 'Embeddings', 'Semantic Search', 'Docker', 'AWS', 'Supabase', 'Tailwind CSS', 'CI/CD Pipelines', 'Linux/Linux Server Administration',
 ]
 
 type Experience = {
