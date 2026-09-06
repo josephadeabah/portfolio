@@ -109,6 +109,15 @@ const awards: Award[] = [
 
 const projects = [
   {
+    name: 'LEXEP',
+    type: 'Opportunity & mentorship platform',
+    description: 'AI-powered matching for African youth, internships, mentors, and community-funded grants.',
+    url: 'https://lexep.vercel.app',
+    stack: 'Next.js · FastAPI · PostgreSQL',
+    preview: 'lexep',
+    video: 'https://www.youtube.com/watch?v=ORghchtMU4s',
+  },
+  {
     name: 'BantuHive Ltd',
     type: 'Crowdfunding & capital infrastructure',
     description: 'AI-powered crowdfunding and peer-to-peer capital infrastructure helping communities, startups, SMEs, and enterprises raise and manage capital digitally.',
@@ -125,15 +134,6 @@ const projects = [
     stack: 'Vue.js · TypeScript · Storyblok · Appwrite',
     preview: 'blog',
     video: 'https://www.youtube.com/watch?v=0RtV_TG4PRE',
-  },
-  {
-    name: 'LEXEP',
-    type: 'Opportunity & mentorship platform',
-    description: 'AI-powered matching for African youth, internships, mentors, and community-funded grants.',
-    url: 'https://lexep.vercel.app',
-    stack: 'Next.js · FastAPI · PostgreSQL',
-    preview: 'lexep',
-    video: 'https://www.youtube.com/watch?v=ORghchtMU4s',
   },
   {
     name: 'MyHealthNode AI',
