@@ -186,7 +186,7 @@ export default function Page() {
         <div>
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">Fullstack Engineer · AI/ML Engineer</p>
           <h1 className="max-w-3xl text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.055em] sm:text-7xl">Architect & Builder of Reliable Modern Systems.</h1>
-          <p className="mt-7 max-w-xl text-pretty text-base leading-7 text-muted-foreground">I&apos;m Joseph Adeabah, a Fullstack, AI/ML-focused software engineer with 5+ years of experience building production systems across fintech, health-tech, education, and real-time applications.</p>
+          <p className="mt-7 max-w-xl text-pretty text-base leading-7 text-muted-foreground">I&apos;m Joseph Adeabah, a Fullstack, Forward-deployed software engineer with 5+ years of experience building production systems across fintech, health-tech, education, and real-time applications.</p>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
             <a className="underline decoration-muted-foreground underline-offset-4" href="mailto:ansahadeabaj45@gmail.com">Email me ↗</a>
             <a className="underline decoration-muted-foreground underline-offset-4" href="https://github.com/josephadeabah">GitHub ↗</a>
