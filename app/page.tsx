@@ -107,7 +107,18 @@ const awards: Award[] = [
   },
 ]
 
-const projects = [
+type Project = {
+  name: string
+  type: string
+  description: string
+  url: string | null
+  github: string
+  stack: string
+  preview: string
+  video: string | null
+}
+
+const projects: Project[] = [
   {
     name: 'LEXEP',
     type: 'Opportunity & mentorship platform',
@@ -158,6 +169,16 @@ const projects = [
     preview: 'school',
     video: 'https://www.youtube.com/watch?v=OXdrQ1Z1XG8',
   },
+  {
+    name: 'FastAPI File Upload API',
+    type: 'Backend reference project',
+    description: 'Production-ready file upload API with JWT auth, refresh tokens, Redis caching, rate limiting, and AWS deployment. A personal reference for backend architecture patterns.',
+    url: null,
+    github: 'https://github.com/josephadeabah/fastapi-file-upload',
+    stack: 'Python · FastAPI · PostgreSQL · Redis · Docker · AWS',
+    preview: 'upload',
+    video: null,
+  },
 ]
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -173,11 +194,12 @@ function ProjectPreview({ type }: { type: string }) {
   if (type === 'blog') return <div className={`${base} bg-[#202020] text-[#f5f5f3]`}><div className={`${nav} text-[#bdbdb8]`}><b className="mr-auto text-[13px] tracking-[-.06em] text-[#f5f5f3]">PNPM</b><span>Essays</span><span>About</span><span>Search</span></div><div className="absolute left-5 top-[78px]"><span className="font-bold tracking-[.15em]">JOSEPH ADEABAH</span><strong className="mt-2 block text-[29px] leading-[.94] tracking-[-.07em]">Notes on building,<br />believing, and becoming.</strong><p className="mt-3 text-[9px] text-[#999]">Ideas from my perspective of the world.</p></div><div className="absolute inset-x-5 bottom-[54px] h-px bg-[#555]" /><div className="absolute inset-x-5 bottom-5 flex gap-2"><i className="h-[18px] flex-1 rounded bg-[#777]" /><i className="h-[18px] flex-1 rounded bg-[#3b3b3b]" /><i className="h-[18px] flex-1 rounded bg-[#3b3b3b]" /></div></div>
   if (type === 'health') return <div className={`${base} bg-[#202020] p-[18px] text-[#f5f5f3]`}><div className="flex items-center text-[9px]"><span className="mr-2 grid size-5 place-items-center rounded-md bg-[#b4e4bc] text-[#202020]">M</span><span>MyHealthNode</span><span className="ml-auto text-[#999]">Menu</span></div><div className="absolute left-[18px] top-[83px]"><span className="font-bold tracking-[.15em]">YOUR HEALTH, CONNECTED</span><strong className="mt-2 block max-w-[210px] text-[29px] leading-[.98] tracking-[-.06em]">A clearer view of your health.</strong><div className="mt-4 h-[3px] w-20 bg-[#b4e4bc]" /></div><div className="absolute bottom-[22px] right-5 flex gap-1.5"><i className="h-[35px] w-[55px] rounded-md bg-[#b4e4bc]" /><i className="h-[35px] w-[55px] rounded-md bg-[#343434]" /><i className="h-[35px] w-[55px] rounded-md bg-[#343434]" /></div></div>
   if (type === 'school') return <div className="flex min-h-[220px] overflow-hidden bg-[#e7e7e5] text-[8px] text-[#262626] sm:min-h-[250px]"><div className="flex w-[28%] flex-col gap-4 bg-[#d2d2cf] p-3"><b className="mb-2 text-sm">DE</b><span className="text-[#666]">Overview</span><span className="text-[#666]">Students</span><span className="text-[#666]">Attendance</span><span className="text-[#666]">Finance</span></div><div className="flex-1 p-[18px]"><div className="flex items-center justify-between text-xs font-semibold"><span>Good morning, Admin</span><i className="size-5 rounded-full bg-[#999]" /></div><div className="mt-6 flex gap-2"><i className="h-12 flex-1 rounded bg-[#262626]" /><i className="h-12 flex-1 rounded bg-[#d1d1ce]" /><i className="h-12 flex-1 rounded bg-[#d1d1ce]" /></div><div className="mt-4 rounded bg-[#f5f5f3] p-2"><i className="mb-2 block h-1 w-[70%] rounded bg-[#777]" /><i className="my-2 block h-1 rounded bg-[#c9c9c6]" /><i className="my-2 block h-1 rounded bg-[#c9c9c6]" /></div></div></div>
+  if (type === 'upload') return <div className={`${base} bg-[#1e1e2e] p-[18px] text-[#cdd6f4]`}><div className="flex items-center text-[9px]"><span className="mr-2 grid size-5 place-items-center rounded-md bg-[#89b4fa] text-[#1e1e2e]">⇪</span><span>fastapi-file-upload</span><span className="ml-auto text-[#6c7086]">/docs</span></div><div className="absolute left-[18px] top-[83px]"><span className="font-bold tracking-[.15em] text-[#89b4fa]">POST /files/upload</span><strong className="mt-2 block max-w-[220px] text-[22px] leading-[1.05] tracking-[-.04em]">Authenticated file uploads, done right.</strong><div className="mt-4 space-y-1.5"><i className="block h-1.5 w-32 rounded bg-[#89b4fa]" /><i className="block h-1.5 w-24 rounded bg-[#45475a]" /><i className="block h-1.5 w-28 rounded bg-[#45475a]" /></div></div><div className="absolute bottom-[22px] right-5 flex gap-1.5"><i className="h-[35px] w-[55px] rounded-md bg-[#89b4fa]" /><i className="h-[35px] w-[55px] rounded-md bg-[#313244]" /><i className="h-[35px] w-[55px] rounded-md bg-[#313244]" /></div></div>
   return <div className={`${base} bg-[#dededb] text-[#181818]`}><div className={nav}><b className="mr-auto text-[13px] tracking-[-.06em]">LEXEP</b><span>Opportunities</span><span>Mentors</span><span>Community</span><button className="rounded-full bg-[#191919] px-2.5 py-1.5 text-[#f5f5f3]">Get started</button></div><div className="absolute left-5 top-[92px] z-10"><span className="font-bold tracking-[.15em]">BUILT FOR YOUR NEXT MOVE</span><strong className="mt-2 block text-[30px] leading-[.94] tracking-[-.07em]">Find the opportunity<br />that finds you.</strong><div className="mt-5 inline-block rounded-full bg-[#191919] px-3 py-2 text-[#f5f5f3]">Explore opportunities →</div></div><div className={`${orbit} right-[13%] top-[85px] size-[150px]`}>{dots}<span className="absolute inset-[45px] rounded-full bg-[#191919]" /></div></div>
 }
 
 export default function Page() {
-  const [activeVideo, setActiveVideo] = useState<(typeof projects)[number] | null>(null)
+  const [activeVideo, setActiveVideo] = useState<Project | null>(null)
 
   return (
     <>
@@ -263,7 +285,7 @@ export default function Page() {
       <section id="projects" className="border-b border-border py-14">
         <div className="flex items-end justify-between gap-4">
           <SectionTitle>Selected projects</SectionTitle>
-          <span className="mb-8 font-mono text-xs text-muted-foreground">05 / live work</span>
+          <span className="mb-8 font-mono text-xs text-muted-foreground">06 / selected work</span>
         </div>
         <div className="grid gap-6">
           {projects.map((project) => (
@@ -278,16 +300,22 @@ export default function Page() {
                 <div className="mt-10">
                   <p className="mb-4 text-xs text-muted-foreground">{project.stack}</p>
                   <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold">
-                    <a className="underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a>
-                    <a className="underline underline-offset-4" href={project.github} target="_blank" rel="noreferrer">View source ↗</a>
-                    <button
-                      type="button"
-                      className="inline-flex items-center gap-2 text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:text-muted-foreground"
-                      onClick={() => setActiveVideo(project)}
-                    >
-                      <span className="grid size-5 place-items-center rounded-full border border-foreground text-[9px] no-underline" aria-hidden="true">▶</span>
-                      Watch walkthrough
-                    </button>
+                    {project.url && (
+                      <a className="underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a>
+                    )}
+                    {project.github && (
+                      <a className="underline underline-offset-4" href={project.github} target="_blank" rel="noreferrer">View source ↗</a>
+                    )}
+                    {project.video && (
+                      <button
+                        type="button"
+                        className="inline-flex items-center gap-2 text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:text-muted-foreground"
+                        onClick={() => setActiveVideo(project)}
+                      >
+                        <span className="grid size-5 place-items-center rounded-full border border-foreground text-[9px] no-underline" aria-hidden="true">▶</span>
+                        Watch walkthrough
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -347,7 +375,7 @@ export default function Page() {
         <p className="font-mono text-xs text-muted-foreground">© 2026 Joseph Adeabah</p>
       </footer>
     </main>
-    {activeVideo && (
+    {activeVideo && activeVideo.video && (
       <div className="fixed inset-0 z-50 grid place-items-center bg-foreground/80 p-4" role="dialog" aria-modal="true" aria-labelledby="video-dialog-title" onClick={() => setActiveVideo(null)}>
         <div className="w-full max-w-3xl rounded-xl border border-border bg-background p-3 shadow-2xl sm:p-5" onClick={(event) => event.stopPropagation()}>
           <div className="mb-4 flex items-center justify-between gap-4">
