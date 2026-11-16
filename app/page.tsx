@@ -113,6 +113,7 @@ const projects = [
     type: 'Opportunity & mentorship platform',
     description: 'AI-powered matching for African youth, internships, mentors, and community-funded grants.',
     url: 'https://lexep.vercel.app',
+    github: 'https://github.com/josephadeabah/lexep',
     stack: 'Next.js · FastAPI · PostgreSQL',
     preview: 'lexep',
     video: 'https://www.youtube.com/watch?v=ORghchtMU4s',
@@ -122,6 +123,7 @@ const projects = [
     type: 'Crowdfunding & capital infrastructure',
     description: 'AI-powered crowdfunding and peer-to-peer capital infrastructure helping communities, startups, SMEs, and enterprises raise and manage capital digitally.',
     url: 'https://crowdfundn.vercel.app',
+    github: 'https://github.com/josephadeabah/crowdfundn',
     stack: 'Next.js · Ruby on Rails · AI · Fintech · Paystack',
     preview: 'bantuhive',
     video: 'https://www.youtube.com/watch?v=_PhQYCNRRAc',
@@ -131,6 +133,7 @@ const projects = [
     type: 'Personal knowledge journal',
     description: 'A personal blog for sharing my knowledge and perspective on the world, built with a flexible CMS and a thoughtful commenting experience.',
     url: 'https://pnpmmedia.com',
+    github: 'https://github.com/josephadeabah/myblog',
     stack: 'Vue.js · TypeScript · Storyblok · Appwrite',
     preview: 'blog',
     video: 'https://www.youtube.com/watch?v=0RtV_TG4PRE',
@@ -140,6 +143,7 @@ const projects = [
     type: 'Personal health command center',
     description: 'Document intelligence and medication adherence workflows with voice AI and confidence-based review.',
     url: 'https://myhealthnode.ai',
+    github: 'https://github.com/HealthBuddyAIORG/HealthBuddy',
     stack: 'Python · FastAPI · Llama · OCR',
     preview: 'health',
     video: 'https://www.youtube.com/watch?v=-kouMOE_Zgo',
@@ -149,6 +153,7 @@ const projects = [
     type: 'Offline-first school management',
     description: 'Reliable school operations for records, attendance, fees, and parent communication—even offline.',
     url: 'https://dreston-school-app-ruddy.vercel.app/login',
+    github: 'https://github.com/josephadeabah/dreston-school-app',
     stack: 'Next.js · FastAPI · Supabase · IndexedDB',
     preview: 'school',
     video: 'https://www.youtube.com/watch?v=OXdrQ1Z1XG8',
@@ -274,6 +279,7 @@ export default function Page() {
                   <p className="mb-4 text-xs text-muted-foreground">{project.stack}</p>
                   <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold">
                     <a className="underline underline-offset-4" href={project.url} target="_blank" rel="noreferrer">View live project ↗</a>
+                    <a className="underline underline-offset-4" href={project.github} target="_blank" rel="noreferrer">View source ↗</a>
                     <button
                       type="button"
                       className="inline-flex items-center gap-2 text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:text-muted-foreground"
