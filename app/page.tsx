@@ -237,7 +237,7 @@ export default function Page() {
           <p className="mt-1 text-foreground">Accra, Ghana</p>
           <p className="mt-6">Currently</p>
           <p className="mt-1 text-foreground">Building AI-powered products</p>
-          <a className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground" href="/joseph-adeabah-resume.pdf" download>
+          <a className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground" href="/joseph_adeabah_resume.pdf" download>
             Download CV <span aria-hidden="true">↓</span>
           </a>
         </aside>
